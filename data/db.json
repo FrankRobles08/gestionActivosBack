@@ -1,0 +1,141 @@
+{
+  "activos": [
+    {
+      "id": "sdasdada",
+      "codTransaccion": "123213",
+      "nroFormulario": "qwsqw",
+      "idMarca": "M1",
+      "idCategoria": "wsqqw",
+      "idTipo": "qws",
+      "valorUnitario": "213123",
+      "idProveedor": "qwsqw",
+      "nroSerial": "wqqqqq",
+      "idEmpresaResponsable": "qwsqw",
+      "idEstado": "321213"
+    }
+  ],
+  "marcas": [
+    {
+      "id": "M1",
+      "nombre": "LG"
+    },
+    {
+      "id": "M2",
+      "nombre": "COMPUMAX"
+    },
+    {
+      "id": "M3",
+      "nombre": "LOGITECH"
+    },
+    {
+      "id": "M4",
+      "nombre": "BENQ"
+    },
+    {
+      "id": "M5",
+      "nombre": "ASUS"
+    },
+    {
+      "id": "M6",
+      "nombre": "LENOVO"
+    },
+    {
+      "id": "M7",
+      "nombre": "HP"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "C1",
+      "nombre": "Equipo de computo"
+    },
+    {
+      "id": "C2",
+      "nombre": "Electrodomestico"
+    },
+    {
+      "id": "C3",
+      "nombre": "Juego"
+    }
+  ],
+  "tipos": [
+    {
+      "id": "T1",
+      "nombre": "Monitor"
+    },
+    {
+      "id": "T2",
+      "nombre": "Teclado"
+    },
+    {
+      "id": "T3",
+      "nombre": "Mouse"
+    },
+    {
+      "id": "T4",
+      "nombre": "Aire acondicionado"
+    },
+    {
+      "id": "T5",
+      "nombre": "Portatil"
+    },
+    {
+      "id": "T6",
+      "nombre": "Impresora"
+    }
+  ],
+  "estados": [
+    {
+      "id": "E1",
+      "nombre": "No asignado"
+    },
+    {
+      "id": "E2",
+      "nombre": "Asignado"
+    },
+    {
+      "id": "E3",
+      "nombre": "Dado de baja por daño"
+    },
+    {
+      "id": "E4",
+      "nombre": "En reparacion y/o garantia"
+    }
+  ],
+  "tipoDocumento": [
+    {
+      "id": "tD1",
+      "nombre": "Cedula"
+    },
+    {
+      "id": "tD2",
+      "nombre": "Cedula de extranjeria"
+    },
+    {
+      "id": "tD3",
+      "nombre": "Pasaporte"
+    }
+  ],
+  "tipoPersona": [
+    {
+      "id": "tP1",
+      "nombre": "Natural"
+    },
+    {
+      "id": "tP2",
+      "nombre": "Juridica"
+    }
+  ],
+  "tipoMovAct": [
+    {
+      "id": "tA1",
+      "nombre": "Entrada"
+    }
+  ],
+  "tipoActivos": [
+    {
+      "id": "t-A1",
+      "nombre": "Billetera"
+    }
+  ]
+}
