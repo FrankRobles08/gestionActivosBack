@@ -1,17 +1,186 @@
 {
   "activos": [
     {
-      "id": "sdasdada",
-      "codTransaccion": "123213",
-      "nroFormulario": "qwsqw",
+      "id": "A1",
+      "nombre": "Computador",
+      "codTransaccion": "4618",
+      "nroFormulario": "13303",
+      "idMarca": "M2",
+      "idCategoria": "C1",
+      "idTipo": "T5",
+      "valorUnitario": "1000",
+      "idProveedor": "066ssdw06",
+      "nroSerial": "403505",
+      "idEmpresaResponsable": "aed5077",
+      "idEstado": "E2"
+    },
+    {
+      "id": "A2",
+      "nombre": "Lavadora",
+      "codTransaccion": "4618",
+      "nroFormulario": "13303",
+      "idMarca": "M2",
+      "idCategoria": "C1",
+      "idTipo": "T5",
+      "valorUnitario": "1000",
+      "idProveedor": "066ssdw06",
+      "nroSerial": "403505",
+      "idEmpresaResponsable": "aed5077",
+      "idEstado": "E3"
+    },
+    {
+      "id": "A2",
+      "nombre": "Lavadora",
+      "codTransaccion": "4618",
+      "nroFormulario": "13303",
+      "idMarca": "M2",
+      "idCategoria": "C1",
+      "idTipo": "T5",
+      "valorUnitario": "1000",
+      "idProveedor": "066ssdw06",
+      "nroSerial": "403505",
+      "idEmpresaResponsable": "aed5077",
+      "idEstado": "E3"
+    },
+    {
+      "id": "A2",
+      "nombre": "Lavadora",
+      "codTransaccion": "4618",
+      "nroFormulario": "13303",
+      "idMarca": "M2",
+      "idCategoria": "C1",
+      "idTipo": "T5",
+      "valorUnitario": "1000",
+      "idProveedor": "066ssdw06",
+      "nroSerial": "403505",
+      "idEmpresaResponsable": "aed5077",
+      "idEstado": "E3"
+    },
+    {
+      "id": "A2",
+      "nombre": "Lavadora",
+      "codTransaccion": "4618",
+      "nroFormulario": "13303",
+      "idMarca": "M2",
+      "idCategoria": "C1",
+      "idTipo": "T5",
+      "valorUnitario": "1000",
+      "idProveedor": "066ssdw06",
+      "nroSerial": "403505",
+      "idEmpresaResponsable": "aed5077",
+      "idEstado": "E3"
+    },
+    {
+      "id": "A2",
+      "nombre": "Lavadora",
+      "codTransaccion": "4618",
+      "nroFormulario": "13303",
+      "idMarca": "M2",
+      "idCategoria": "C1",
+      "idTipo": "T5",
+      "valorUnitario": "1000",
+      "idProveedor": "066ssdw06",
+      "nroSerial": "403505",
+      "idEmpresaResponsable": "aed5077",
+      "idEstado": "E3"
+    },
+    {
+      "id": "A2",
+      "nombre": "Lavadora",
+      "codTransaccion": "4618",
+      "nroFormulario": "13303",
+      "idMarca": "M2",
+      "idCategoria": "C1",
+      "idTipo": "T5",
+      "valorUnitario": "1000",
+      "idProveedor": "066ssdw06",
+      "nroSerial": "403505",
+      "idEmpresaResponsable": "aed5077",
+      "idEstado": "E3"
+    },
+    {
+      "id": "A2",
+      "nombre": "Lavadora",
+      "codTransaccion": "4618",
+      "nroFormulario": "13303",
+      "idMarca": "M2",
+      "idCategoria": "C1",
+      "idTipo": "T5",
+      "valorUnitario": "1000",
+      "idProveedor": "066ssdw06",
+      "nroSerial": "403505",
+      "idEmpresaResponsable": "aed5077",
+      "idEstado": "E3"
+    },
+    {
+      "id": "A2",
+      "nombre": "Lavadora",
+      "codTransaccion": "4618",
+      "nroFormulario": "13303",
+      "idMarca": "M2",
+      "idCategoria": "C1",
+      "idTipo": "T5",
+      "valorUnitario": "1000",
+      "idProveedor": "066ssdw06",
+      "nroSerial": "403505",
+      "idEmpresaResponsable": "aed5077",
+      "idEstado": "E3"
+    },
+    {
+      "id": "A3",
+      "nombre": "Impresora",
+      "codTransaccion": "4618",
+      "nroFormulario": "13303",
+      "idMarca": "M2",
+      "idCategoria": "C1",
+      "idTipo": "T5",
+      "valorUnitario": "1000",
+      "idProveedor": "066ssdw06",
+      "nroSerial": "403505",
+      "idEmpresaResponsable": "aed5077",
+      "idEstado": "E4"
+    },
+    {
+      "id": "4",
+      "nombre": "0",
+      "codTransaccion": "7",
+      "nroFormulario": "7",
       "idMarca": "M1",
-      "idCategoria": "wsqqw",
-      "idTipo": "qws",
-      "valorUnitario": "213123",
-      "idProveedor": "qwsqw",
-      "nroSerial": "wqqqqq",
-      "idEmpresaResponsable": "qwsqw",
-      "idEstado": "321213"
+      "idCategoria": "C1",
+      "idTipo": "T1",
+      "valorUnitario": "7",
+      "idProveedor": "7",
+      "nroSerial": "7",
+      "idEmpresaResponsable": "7",
+      "idEstado": "E1"
+    },
+    {
+      "id": "scsdcsad",
+      "nombre": "7",
+      "codTransaccion": "7",
+      "nroFormulario": "7",
+      "idMarca": "M1",
+      "idCategoria": "C1",
+      "idTipo": "T1",
+      "valorUnitario": "7",
+      "idProveedor": "7",
+      "nroSerial": "7",
+      "idEmpresaResponsable": "7",
+      "idEstado": "E1"
+    },
+    {
+      "id": "7",
+      "nombre": "7",
+      "codTransaccion": "7",
+      "nroFormulario": "7",
+      "idMarca": "M1",
+      "idCategoria": "C1",
+      "idTipo": "T1",
+      "valorUnitario": "7",
+      "idProveedor": "7",
+      "nroSerial": "7",
+      "idEmpresaResponsable": "7",
+      "idEstado": "E1"
     }
   ],
   "marcas": [
@@ -42,6 +211,32 @@
     {
       "id": "M7",
       "nombre": "HP"
+    },
+    {
+      "id": "4",
+      "nombre": "4"
+    },
+    {
+      "id": "7",
+      "nombre": "7"
+    }
+  ],
+  "personas": [
+    {
+      "id": "1027281994",
+      "tipoDocumento": "tD1",
+      "nit": "12121",
+      "nombre": "Samuel ",
+      "email": "karen@email.com",
+      "tipoPersona": "tP1"
+    },
+    {
+      "id": "5",
+      "tipoDocumento": "tD1",
+      "nit": "5",
+      "nombre": "5",
+      "email": "5",
+      "tipoPersona": "tP1"
     }
   ],
   "categorias": [
@@ -100,6 +295,14 @@
     {
       "id": "E4",
       "nombre": "En reparacion y/o garantia"
+    },
+    {
+      "id": "1",
+      "nombre": "1"
+    },
+    {
+      "id": "1",
+      "nombre": "1"
     }
   ],
   "tipoDocumento": [
@@ -124,18 +327,40 @@
     {
       "id": "tP2",
       "nombre": "Juridica"
+    },
+    {
+      "id": "3",
+      "nombre": "3"
+    },
+    {
+      "id": "4",
+      "nombre": "4"
     }
   ],
   "tipoMovAct": [
     {
-      "id": "tA1",
+      "id": "tM1",
       "nombre": "Entrada"
+    },
+    {
+      "id": "4",
+      "nombre": "4"
     }
   ],
   "tipoActivos": [
     {
-      "id": "t-A1",
+      "id": "tA1",
       "nombre": "Billetera"
+    },
+    {
+      "id": "4",
+      "nombre": "4",
+      "email": "karen@email.com"
+    },
+    {
+      "id": "6",
+      "nombre": "6",
+      "email": "6"
     }
   ]
 }

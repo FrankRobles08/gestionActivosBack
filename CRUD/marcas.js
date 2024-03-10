@@ -1,18 +1,21 @@
 import { loadAgregar } from "./crud.js";
 import {
     data,
-    createInputs
-} from "./variables.js";
+    createDomElements
+} from "./constantes.js";
 
-document.getElementById('marcas').addEventListener('click', () => {
-    createInputs('marcas');
-    document.getElementById('form-marcas').style.display = 'flex'
+document.getElementById('agregarMarcas').addEventListener('click', () => {
+    createDomElements('agregar', 'marcas');
+    document.getElementById('agregar-marcas').style.display = 'flex'
     document.getElementById('submit-marcas').addEventListener('click', function (e){
         e.preventDefault();
         e.stopImmediatePropagation();
         loadAgregar('marcas', {
-            "id": document.querySelector('#input-idMarca').value,
-            "nombre": document.querySelector('#input-nombreMarca').value
+            "id": document.querySelector('#input-id').value,
+            "nombre": document.querySelector('#input-nombre').value
         });
     });
+});
+document.getElementById('buscarMarcas').addEventListener('click', (e)=>{
+    createDomElements('buscar', 'marcas');
 });

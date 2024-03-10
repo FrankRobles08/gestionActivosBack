@@ -1,6 +1,6 @@
 const URL_API = "http://localhost:3000/"
 
-const getDict = (endPoint, select) => {
+const getOptions = (endPoint, select) => {
     fetch(`${URL_API + endPoint}`)
         .then(response => {
             if (!response.ok) {
@@ -16,6 +16,22 @@ const getDict = (endPoint, select) => {
                 option.innerHTML = item.nombre;
                 select.append(option);
             });
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+const getData = (endPoint) => {
+    return fetch(`${URL_API + endPoint}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            return data;
         })
         .catch(error => {
             console.error('Error:', error);
@@ -49,6 +65,7 @@ const loadAgregar = (endPoint, newDict) => {
 }
 
 export {
-    getDict,
+    getOptions,
+    getData,
     loadAgregar
 }

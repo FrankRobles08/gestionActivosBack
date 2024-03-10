@@ -1,18 +1,21 @@
 import { loadAgregar } from "./crud.js";
 import {
     data,
-    createInputs
-} from "./variables.js";
+    createDomElements
+} from "./constantes.js";
 
-document.getElementById('tipoPersona').addEventListener('click', () => {
-    createInputs('tipoPersona');
-    document.getElementById('form-tipoPersona').style.display = 'flex'
+document.getElementById('agregarTipoPersona').addEventListener('click', () => {
+    createDomElements('agregar', 'tipoPersona');
+    document.getElementById('agregar-tipoPersona').style.display = 'flex'
     document.getElementById('submit-tipoPersona').addEventListener('click', function (e){
         e.preventDefault();
         e.stopImmediatePropagation();
         loadAgregar('tipoPersona', {
-            "id": document.querySelector('#input-idTipoPersona').value,
-            "nombre": document.querySelector('#input-nombreTipoPersona').value
+            "id": document.querySelector('#input-id').value,
+            "nombre": document.querySelector('#input-nombre').value
         });
     });
+});
+document.getElementById('buscarTipoPersona').addEventListener('click', (e)=>{
+    createDomElements('buscar', 'tipoPersona');
 });

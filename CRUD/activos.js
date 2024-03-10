@@ -1,17 +1,18 @@
 import { loadAgregar } from "./crud.js";
 import {
     data,
-    createInputs
-} from "./variables.js";
+    createDomElements
+} from "./constantes.js";
 
-document.getElementById('activos').addEventListener('click', (e)=>{
-    createInputs('activos');
-    document.getElementById('form-activos').style.display = 'flex'
+document.getElementById('agregarActivos').addEventListener('click', (e)=>{
+    createDomElements('agregar', 'activos');
+    document.getElementById('agregar-activos').style.display = 'flex'
     document.getElementById('submit-activos').addEventListener('click', function (e){
         e.preventDefault();
         e.stopImmediatePropagation();
         loadAgregar('activos', {
             "id": document.querySelector('#input-id').value,
+            "nombre": document.querySelector('#input-nombre').value,
             "codTransaccion": document.querySelector('#input-transaccion').value,
             "nroFormulario": document.querySelector('#input-formulario').value,
             "idMarca": document.querySelector('#input-marcas').value,            
@@ -24,4 +25,7 @@ document.getElementById('activos').addEventListener('click', (e)=>{
             "idEstado": document.querySelector('#input-estados').value
         });
     });
+});
+document.getElementById('buscarActivos').addEventListener('click', (e)=>{
+    createDomElements('buscar', 'activos');
 });

@@ -38,29 +38,80 @@ li {
 }
 
 .contenedor-foto-titulo{
-	height: 64px;
 	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	gap: 10px;
 }
 
-.contenedor-foto{
-	position: fixed;
-	width: 50px;
-	left: 20px;
-	z-index: 1;
-	transition: all .2s ease;
-}
-.foto{
-	width: 100%;
-	border-radius: 100%;
+.cotenedor-foto{
+	width: 100px;
+	height: auto;
+	padding-top: 2%;
 }
 .titulo{
-	margin-right: 20px;
-	color: var(--blue);
-	transition: all .3s ease;
+	padding-top: 13%;
+	padding-left: 0%;
 }
+
+.foto{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.search-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+	border: 1px solid #f2f2f2;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	max-width: 500px;
+	margin: auto;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+}
+
+.search-bar {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+#search-input {
+	padding: 10px;
+	border: 1px solid #f2f2f2;
+	border-radius: 5px;
+	flex-grow: 1;
+	margin-right: 10px;
+}
+
+#search-button {
+	padding: 10px;
+	border: none;
+	background-color: #3e98f8;
+	color: white;
+	cursor: pointer;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#search-button:hover {
+	background-color: #999;
+}
+
+#search-results {
+	border: 1px solid #f2f2f2;
+	border-radius: 5px;
+	padding: 10px;
+	height: 200px;
+	overflow-y: auto;
+	background-color: #f9f9f9;
+}
+
 
 
 /* SIDEBAR */
@@ -248,7 +299,6 @@ nav {
 	height: 64px;
 	padding: 0 20px;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	grid-gap: 28px;
 	position: sticky;
@@ -317,7 +367,7 @@ nav .divider {
 	display: block;
 }
 nav .profile {
-	position: sticky;
+	position: absolute;
 }
 nav .profile img {
 	width: 36px;
@@ -614,145 +664,43 @@ main .btn-send:hover {
 /* MAIN */
 /* CONTENT */
 
-.container {
+form {
+    display: flex;
     flex-direction: column;
-    max-width: 50%;
-    min-width: 500px;
-    margin: 5vh auto 8vh;
+    max-width: 500px;
+    margin: auto;
     padding: 20px;
-	border: 1px solid #f2f2f2;
-    border-radius: 8px;
-	background-color: var(--light);
-	box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.1);
-}
-
-form h1 {
-	margin-bottom: 24px;
-	text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 form label {
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
 form input[type="text"], form input[type="number"], form select {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     width: 100%;
 }
-form select{
-	cursor: pointer;
-}
 
 form button {
+    padding: 10px 20px;
     border: none;
     background-color: #007BFF;
     color: white;
     cursor: pointer;
     border-radius: 5px;
-	font-size: 30px;
 }
 
 form button:hover {
-	opacity: .9;
+    background-color: #0056b3;
 }
 
-.box {
-	display: flex;
-	flex-direction: column;
-	gap: 4px;
-}
 
-.search-container {
-	display: none;
-}
-.search-bar {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 10px;
-}
-
-#search-input {
-	padding: 10px;
-	border: 1px solid #f2f2f2;
-	border-radius: 5px;
-	flex-grow: 1;
-	margin-right: 10px;
-}
-
-#search-button {
-	border: none;
-	background-color: var(--blue);
-	color: var(--light);
-	font-size: 20px;
-	cursor: pointer;
-	border-radius: 5px;
-	width: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-#search-button:hover {
-	opacity: .9;
-}
-.search-results {
-	border: 1px solid #f2f2f2;
-	border-radius: 5px;
-	padding: 10px;
-	min-height: 350px;
-	max-height: 65vh;
-	overflow-y: auto;
-	background-color: var(--grey);
-}
-
-.info-container{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 10px;
-	padding: 10px 20px;
-	border-radius: 5px;
-	background-color: var(--light);
-	color: var(--dark);
-}
-.info-container i{
-	font-size: 20px;
-	cursor: pointer;
-}
-.info-container i:hover{
-	font-size: 22px;
-	color: var(--blue);
-}
-dialog .bx-x {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	font-size: 30px;
-	cursor: pointer;
-}
-dialog .bx-x:hover {
-	color: var(--red);
-	font-size: 32px;
-}
-dialog h1 {
-	margin-bottom: 20px;
-}
-.text-container{
-	display: flex;
-	align-items: center;
-	gap: 4px;
-	margin: 10px;
-}
-.text-container i{
-	font-size: 6px;
-}
-
-.container::backdrop{
-	background-color: rgba(0, 0, 0, .5);
-}
 
 @media screen and (max-width: 768px) {
 	#content {
