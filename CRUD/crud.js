@@ -1,4 +1,7 @@
 const URL_API = "http://localhost:3000/"
+const myHeaders = new Headers({
+    "Content-Type": "application/json"
+});
 
 const getOptions = (endPoint, select, selected) => {
     fetch(`${URL_API + endPoint}`)
@@ -40,21 +43,16 @@ const getData = (endPoint) => {
 }
 
 const loadData = (endPoint, newDict) => {
-    let correct;
     for (let i in newDict){
-        if (newDict[i].length === 0){
-            correct = false
-            alert('Debes llenar toda la información para continuar')
-            break;
+        if (newDict[i].length > 0){
+            continue;
         } else{
-            correct = true
+            alert('Debes llenar toda la información para continuar');
+            break;
         }
     }
     if (correct){
-        const myHeaders = new Headers({
-            "Content-Type": "application/json"
-        });
-        fetch(`${URL_API + endPoint}`, {
+        fetch(`${URL_API + endPoint + id}`, {
                 method: 'POST',
                 headers: myHeaders,
                 body: JSON.stringify(newDict),
@@ -64,9 +62,33 @@ const loadData = (endPoint, newDict) => {
             .catch((error) => console.error('Error:', error));
     }
 }
+const updateData = (endPoint, id, newDict) => {
+    let correct;
+    for (let i in newDict){
+        if (newDict[i].length > 0){
+            continue;
+        } else{
+            alert('Debes llenar toda la información para continuar');
+            break;
+        }
+    }
+    if (correct){
+        fetch(`${URL_API + endPoint + id}`, {
+                method: 'PUT',
+                headers: myHeaders,
+                body: JSON.stringify(newDict),
+            })
+            .then(response => response.json())
+            .then(data => console.log('Success:', data))
+            .catch((error) => console.error('Error:', error));
+    } else{
+        console.log('hola');
+    }
+}
 
 export {
     getOptions,
     getData,
-    loadData
+    loadData,
+    updateData
 }

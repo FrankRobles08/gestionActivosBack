@@ -1,10 +1,13 @@
 import {
     createDomElements
 } from "./constantes.js";
-import { loadData } from "./crud.js";
+import { 
+    loadData,
+    updateData 
+} from "./crud.js";
 
-loadDataActivos = () => {
-    loadData('activos', {
+export const loadDataActivos = (action, id) => {
+    const newDict = {
         "id": document.querySelector('#input-id').value,
         "nombre": document.querySelector('#input-nombre').value,
         "codTransaccion": document.querySelector('#input-transaccion').value,
@@ -17,19 +20,25 @@ loadDataActivos = () => {
         "nroSerial": document.querySelector('#input-nroSerial').value,
         "idEmpresaResponsable": document.querySelector('#input-empresaResponsable').value,
         "idEstado": document.querySelector('#input-estados').value
-    })
+    };
+    switch (action){
+        case 'agregar':
+            loadData('activos', newDict);
+            break;
+        case 'editar':
+            updateData('activos', id, newDict);
+            break;
+    }
 };
 
 document.getElementById('agregarActivos').addEventListener('click', (e)=>{
     createDomElements('agregar', 'activos');
-    addEventListeners();
 });
 document.getElementById('buscarActivos').addEventListener('click', (e)=>{
     createDomElements('buscar', 'activos');
 });
 document.getElementById('editarActivos').addEventListener('click', (e)=>{
     createDomElements('editar', 'activos');
-    addEventListeners();
 });
 // document.getElementById('eliminarActivos').addEventListener('click', (e)=>{
     // createDomElements('eliminar', 'activos');

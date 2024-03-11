@@ -1,7 +1,6 @@
 import {
     getOptions,
-    getData,
-    loadData
+    getData
 } from './crud.js';
 import { loadDataActivos } from './activos.js';
 import { loadDataEstados } from './estado.js';
@@ -65,81 +64,22 @@ const info = {
     },
 }
 
-// const createDict = (cat) => {
-//     debugger
-//     // for (let i in newDict){
-//     //     if (newDict[i].length === 0){
-//     //         correct = false
-//     //         alert('Debes llenar toda la información para continuar')
-//     //         break;
-//     //     } else{
-//     //         correct = true
-//     //     }
-//     // }
-//     const newData = {
-//         "activos": {
-//             "id": document.querySelector('#input-id').value,
-//             "nombre": document.querySelector('#input-nombre').value,
-//             "codTransaccion": document.querySelector('#input-transaccion').value,
-//             "nroFormulario": document.querySelector('#input-formulario').value,
-//             "idMarca": document.querySelector('#input-marcas').value,            
-//             "idCategoria": document.querySelector('#input-categorias').value,
-//             "idTipo": document.querySelector('#input-tipos').value,
-//             "valorUnitario": document.querySelector('#input-valorUnitario').value,
-//             "idProveedor": document.querySelector('#input-proveedor').value,
-//             "nroSerial": document.querySelector('#input-nroSerial').value,
-//             "idEmpresaResponsable": document.querySelector('#input-empresaResponsable').value,
-//             "idEstado": document.querySelector('#input-estados').value
-//         },
-//         "marcas": {
-//             "id": document.querySelector('#input-id').value,
-//             "nombre": document.querySelector('#input-nombre').value
-//         },
-//         "personas": {
-//             "tipoDocumento": document.querySelector('#input-tipoDocumento').value,
-//             "id": document.querySelector('#input-id').value,
-//             "nit": document.querySelector('#input-nit').value,
-//             "nombre": document.querySelector('#input-nombre').value,
-//             "email": document.querySelector('#input-email').value,
-//             "tipoPersona": document.querySelector('#input-tipoPersona').value,
-//         },
-//         "estados": {
-//             "id": document.querySelector('#input-id').value,
-//             "nombre": document.querySelector('#input-nombre').value
-//         },
-//         "tipoPersona": {
-//             "id": document.querySelector('#input-id').value,
-//             "nombre": document.querySelector('#input-nombre').value
-//         },
-//         "tipoMovAct": {
-//             "id": document.querySelector('#input-id').value,
-//             "nombre": document.querySelector('#input-nombre').value
-//         },
-//         "tipoActivos": {
-//             "id": document.querySelector('#input-id').value,
-//             "nombre": document.querySelector('#input-nombre').value,
-//             "email": document.querySelector('#input-email').value
-//         }
-//     }
-//     loadData(cat, newData[cat]);
-// }
-
-const whichFunction = (cat) => {
+const whichFunction = (cat, action, id) => {
     switch (cat) {
         case 'activos':
-            loadDataActivos();
+            loadDataActivos(action, id);
         case 'marcas':
-            loadDataMarcas();
+            loadDataMarcas(action, id);
         case 'personas':
-            loadDataPersonas();
+            loadDataPersonas(action, id);
         case 'estados':
-            loadDataEstados();
+            loadDataEstados(action, id);
         case 'tipoPersona':
-            loadDataTipoPersona();
+            loadDataTipoPersona(action, id);
         case 'tipoMovAct':
-            loadDataTipoMovAct();
+            loadDataTipoMovAct(action, id);
         case 'tipoActivos':
-            loadDataTipoActivos();
+            loadDataTipoActivos(action, id);
     }
 }
 
@@ -161,6 +101,7 @@ const createDialog = (action, element, cat) => {
         dialog.remove();
     });
     dialog.append(closeBtn, name);
+    console.log(element, Object.values(element));
     const arrayInfo = Object.values(info[cat]);
     const arrayElement = Object.values(element);
 
@@ -171,7 +112,9 @@ const createDialog = (action, element, cat) => {
             submit.classList.add('submit-button', `submit-${cat}`);
             submit.setAttribute('type', 'submit')
             submit.innerHTML = '+';
-            submit.addEventListener('click', whichFunction(cat));
+            submit.addEventListener('click', (e) => {
+                whichFunction(cat, action, `/${element.id}`,);
+            })
             dialog.appendChild(submit);
             break;
         case 'eliminar':
@@ -229,8 +172,18 @@ const createSearchElements = (cat, action) => {
                     break;
             }
             openBtn = document.createElement('i');
-            openBtn.classList.add('bx', 'bx-dots-horizontal-rounded');
             openBtn.id = `iconOpen-${cat+'_'+i}`;
+            switch (action){
+                case 'buscar':
+                    openBtn.classList.add('bx', 'bx-dots-horizontal-rounded');
+                    break;
+                case 'editar':
+                    openBtn.classList.add('bx', 'bx-edit');
+                    break;
+                case 'eliminar':
+                    openBtn.classList.add('bx', 'bx-trash');
+                    break;
+            }
             box.append(openBtn);
             div.append(box);
             openBtn.addEventListener('click', () => {
@@ -271,7 +224,9 @@ const createDomElements = (action, cat) => {
             submit.innerHTML = '+'
             container.appendChild(submit);   
             document.querySelector('#content').append(container);  
-            submit.addEventListener('click', createDict(cat));
+            submit.addEventListener('click', () => {
+                whichFunction(cat, action, '');
+            })
             break;
         case 'buscar':
             removeElements();

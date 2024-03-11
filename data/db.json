@@ -2,7 +2,7 @@
   "activos": [
     {
       "id": "A1",
-      "nombre": "Computador",
+      "nombre": "Compu",
       "codTransaccion": "4618",
       "nroFormulario": "13303",
       "idMarca": "M2",
@@ -16,7 +16,7 @@
     },
     {
       "id": "A2",
-      "nombre": "Lavadora",
+      "nombre": "Lavador",
       "codTransaccion": "4618",
       "nroFormulario": "13303",
       "idMarca": "M2",
@@ -30,7 +30,7 @@
     },
     {
       "id": "1",
-      "nombre": "4",
+      "nombre": "oeeeeee4",
       "codTransaccion": "1",
       "nroFormulario": "1",
       "idMarca": "M1",
@@ -54,6 +54,62 @@
       "idProveedor": "4",
       "nroSerial": "4",
       "idEmpresaResponsable": "4",
+      "idEstado": "E1"
+    },
+    {
+      "id": "6",
+      "nombre": "6",
+      "codTransaccion": "6",
+      "nroFormulario": "6",
+      "idMarca": "M1",
+      "idCategoria": "C1",
+      "idTipo": "T1",
+      "valorUnitario": "6",
+      "idProveedor": "6",
+      "nroSerial": "6",
+      "idEmpresaResponsable": "6",
+      "idEstado": "E1"
+    },
+    {
+      "id": "aaaaaaaaaaaaaaaaaaaaaaa",
+      "nombre": "1",
+      "codTransaccion": "1",
+      "nroFormulario": "1",
+      "idMarca": "M1",
+      "idCategoria": "C1",
+      "idTipo": "T1",
+      "valorUnitario": "1",
+      "idProveedor": "1",
+      "nroSerial": "1",
+      "idEmpresaResponsable": "1",
+      "idEstado": "E1"
+    },
+    {
+      "id": "bbbbbbbbbbbbbbbbbbbbbbbb",
+      "nombre": "1",
+      "codTransaccion": "1",
+      "nroFormulario": "1",
+      "idMarca": "M1",
+      "idCategoria": "C1",
+      "idTipo": "T1",
+      "valorUnitario": "1",
+      "idProveedor": "1",
+      "nroSerial": "1",
+      "idEmpresaResponsable": "1",
+      "idEstado": "E1"
+    },
+    {
+      "id": "zzzzzzzzzzzzz",
+      "nombre": "1",
+      "codTransaccion": "1",
+      "nroFormulario": "1",
+      "idMarca": "M1",
+      "idCategoria": "C1",
+      "idTipo": "T1",
+      "valorUnitario": "1",
+      "idProveedor": "1",
+      "nroSerial": "1",
+      "idEmpresaResponsable": "1",
       "idEstado": "E1"
     }
   ],
@@ -93,6 +149,22 @@
     {
       "id": "7",
       "nombre": "7"
+    },
+    {
+      "id": "6",
+      "nombre": "6"
+    },
+    {
+      "id": "aaaaaaaaaaaaaaaaaaaaaaa",
+      "nombre": "1"
+    },
+    {
+      "id": "bbbbbbbbbbbbbbbbbbbbbbbb",
+      "nombre": "1"
+    },
+    {
+      "id": "zzzzzzzzzzzzz",
+      "nombre": "1"
     }
   ],
   "personas": [
