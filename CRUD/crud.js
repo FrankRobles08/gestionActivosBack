@@ -1,6 +1,6 @@
 const URL_API = "http://localhost:3000/"
 
-const getOptions = (endPoint, select) => {
+const getOptions = (endPoint, select, selected) => {
     fetch(`${URL_API + endPoint}`)
         .then(response => {
             if (!response.ok) {
@@ -15,6 +15,7 @@ const getOptions = (endPoint, select) => {
                 option.value = item.id;
                 option.innerHTML = item.nombre;
                 select.append(option);
+                option.selected = selected === item.id ? true : false;
             });
         })
         .catch(error => {
@@ -38,7 +39,7 @@ const getData = (endPoint) => {
         });
 }
 
-const loadAgregar = (endPoint, newDict) => {
+const loadData = (endPoint, newDict) => {
     let correct;
     for (let i in newDict){
         if (newDict[i].length === 0){
@@ -67,5 +68,5 @@ const loadAgregar = (endPoint, newDict) => {
 export {
     getOptions,
     getData,
-    loadAgregar
+    loadData
 }

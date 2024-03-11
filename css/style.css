@@ -615,6 +615,7 @@ main .btn-send:hover {
 /* CONTENT */
 
 .container {
+	display: flex;
     flex-direction: column;
     max-width: 50%;
     min-width: 500px;
@@ -631,11 +632,11 @@ form h1 {
 	text-align: center;
 }
 
-form label {
+label {
     font-weight: bold;
 }
 
-form input[type="text"], form input[type="number"], form select {
+input[type="text"], input[type="number"], select {
     margin-bottom: 24px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -646,7 +647,7 @@ form select{
 	cursor: pointer;
 }
 
-form button {
+.submit-button {
     border: none;
     background-color: #007BFF;
     color: white;
@@ -674,7 +675,7 @@ form button:hover {
 	margin-bottom: 10px;
 }
 
-#search-input {
+.search-input {
 	padding: 10px;
 	border: 1px solid #f2f2f2;
 	border-radius: 5px;
@@ -690,6 +691,7 @@ form button:hover {
 	cursor: pointer;
 	border-radius: 5px;
 	width: 40px;
+	height: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -725,6 +727,12 @@ form button:hover {
 .info-container i:hover{
 	font-size: 22px;
 	color: var(--blue);
+}
+dialog {
+	position: fixed;
+	max-height: 602px;
+	top: 8%;
+	overflow :auto;
 }
 dialog .bx-x {
 	position: absolute;
