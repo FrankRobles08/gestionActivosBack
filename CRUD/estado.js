@@ -8,23 +8,28 @@ import {
 
 
 export const loadDataEstados = (action, id) => {
-    const newData = {
+    const newDict = {
         "id": document.querySelector('#input-id').value,
         "nombre": document.querySelector('#input-nombre').value
     };
     switch (action){
         case 'agregar':
-            loadData('estados', newData);
+            loadData('estados', newDict);
             break;
         case 'editar':
-            updateData('estados', id, newData);
+            updateData('estados', id, newDict);
             break;
     }
-}
-
+};
+document.getElementById('agregarEstados').addEventListener('click', ()=>{
+    createDomElements('agregar', 'estados');
+});
 document.getElementById('buscarEstado').addEventListener('click', ()=>{
     createDomElements('buscar', 'estados');
 });
 document.getElementById('editarEstados').addEventListener('click', () => {
     createDomElements('editar', 'estados');
+});
+document.getElementById('eliminarEstados').addEventListener('click', () => {
+    createDomElements('eliminar', 'estados');
 });

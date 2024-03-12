@@ -1,6 +1,7 @@
 import {
     getOptions,
-    getData
+    getData,
+    deleteData
 } from './crud.js';
 import { loadDataActivos } from './activos.js';
 import { loadDataEstados } from './estado.js';
@@ -13,12 +14,13 @@ let name, text, number, select, label, container, div, search, searchInput, open
 
 const info = {
     "activos":{
-        "activos": ['name'],
+        "name": ['name', 'activos'],
         "id": ['text', 'ID'],
         "nombre": ['text', 'Nombre'],
         "transaccion": ['text', 'Código de transacción'],
         "formulario": ['text', 'Número de formulario'],
-        "marcas": ['select', 'ID marca'],             
+        "marcas": ['select', 'ID marca'],       
+        "ubicacion": ['select', 'Ubicación'],    
         "categorias": ['select', 'ID categoría'],
         "tipos": ['select', 'ID tipo'],
         "valorUnitario": ['number', 'Valor unitario'],
@@ -28,12 +30,12 @@ const info = {
         "estados": ['select', 'ID estado']
     },
     "marcas": {
-        "marcas": ['name'],
+        "name": ['name', 'marcas'],
         "id": ['text', 'ID'],
         "nombre": ['text', 'Nombre']
     },
     "personas": {
-        "personas": ['name'],
+        "name": ['name', 'personas'],
         "tipoDocumento": ['select', 'Tipo de documento'],
         "id": ['number', 'ID'],
         "nit": ['number', 'NIT'],
@@ -42,22 +44,22 @@ const info = {
         "tipoPersona": ['select', 'Tipo de persona']
     },
     "estados": {
-        "estados": ['name'],
+        "name": ['name', 'estados'],
         "id": ['text', 'ID'],
         "nombre": ['text', 'Nombre']
     },
     "tipoPersona": {
-        "tipos de personas": ['name'],
+        "name": ['name', 'tipo de personas'],
         "id": ['text', 'ID'],
         "nombre": ['text', 'Nombre']
     },
     "tipoMovAct": {
-        "tipos de movimientos del activo": ['name'],
+        "name": ['name', 'tipo de movimientos de activos'],
         "id": ['text', 'ID'],
         "nombre": ['text', 'Nombre']
     },
     "tipoActivos": {
-        "tipos de activos": ['name'],
+        "name": ['name', 'tipo de activos'],
         "id": ['text', 'ID'],
         "nombre": ['text', 'Nombre'],
         "email": ['text', 'Email'],
@@ -94,8 +96,7 @@ const createDialog = (action, element, cat) => {
     dialog = document.createElement('dialog');
     dialog.classList.add('container', `modal-${element.id}`);
     name = document.createElement('h1');
-    name.textContent = action[0].toUpperCase()+action.slice(1)+' '+element.nombre[0].toLowerCase()+element.nombre.slice(1);
-    closeBtn = document.createElement('i');
+    name.textContent = action[0].toUpperCase()+action.slice(1)+' '+info[cat].name[1];    closeBtn = document.createElement('i');
     closeBtn.classList.add('bx', 'bx-x');
     closeBtn.addEventListener('click', () => {
         dialog.remove();
@@ -113,6 +114,7 @@ const createDialog = (action, element, cat) => {
             submit.setAttribute('type', 'submit')
             submit.innerHTML = '+';
             submit.addEventListener('click', (e) => {
+                e.preventDefault();
                 whichFunction(cat, action, `/${element.id}`,);
             })
             dialog.appendChild(submit);
@@ -136,7 +138,7 @@ const createDialog = (action, element, cat) => {
 
 const createSearchElements = (cat, action) => {
     container = document.createElement('div');
-    container.classList.add('container');
+    container.classList.add('container', action);
     container.id = `${action}-${cat}`;
     search = document.createElement('div');
     search.classList.add('search-bar');
@@ -187,7 +189,14 @@ const createSearchElements = (cat, action) => {
             box.append(openBtn);
             div.append(box);
             openBtn.addEventListener('click', () => {
-                createDialog(action, element, cat);
+                switch (action){
+                    case 'eliminar':
+                        deleteData(cat, `/${element.id}`);
+                        break;
+                    default:
+                        createDialog(action, element, cat);
+                        break;
+                }
             });
         });
         searchInput = document.getElementById(action+'-input-'+cat);
@@ -207,15 +216,14 @@ const createSearchElements = (cat, action) => {
 }
 
 const createDomElements = (action, cat) => {
-
     switch (action) {
         case 'agregar':
             removeElements();
             container = document.createElement('form');
-            container.classList.add('container');
+            container.classList.add('container', action);
             container.id = `${action}-${cat}`;
             name = document.createElement('h1');
-            name.textContent = action[0].toUpperCase()+action.slice(1)+' '+cat[0].toUpperCase()+cat.slice(1);
+            name.textContent = action[0].toUpperCase()+action.slice(1)+' '+info[cat].name[1];
             container.appendChild(name);
             createFormElements(action, container, '', cat);
             submit = document.createElement('button');
@@ -224,21 +232,14 @@ const createDomElements = (action, cat) => {
             submit.innerHTML = '+'
             container.appendChild(submit);   
             document.querySelector('#content').append(container);  
-            submit.addEventListener('click', () => {
+            container.addEventListener('submit', (e) => {
+                e.preventDefault();
                 whichFunction(cat, action, '');
             })
             break;
-        case 'buscar':
+        default:
             removeElements();
             createSearchElements(cat, action);
-            break;
-        case 'editar':
-            removeElements();
-            createSearchElements(cat, action);
-            break;
-        case 'eliminar':
-            removeElements();
-            break;
     }
 }
 

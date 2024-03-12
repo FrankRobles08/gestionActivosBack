@@ -8,16 +8,16 @@ import {
 
 
 export const loadDataTipoActivos = (action, id) => {
-    const newData = {
+    const newDict = {
         "id": document.querySelector('#input-id').value,
         "nombre": document.querySelector('#input-nombre').value
     };
     switch (action){
         case 'agregar':
-            loadData('tipoActivos', newData);
+            loadData('tipoActivos', newDict);
             break;
         case 'editar':
-            updateData('tipoActivos', id, newData);
+            updateData('tipoActivos', id, newDict);
             break;
     }
 }
@@ -26,4 +26,7 @@ document.getElementById('buscarTipoActivos').addEventListener('click', (e)=>{
 });
 document.getElementById('editarTipoActivos').addEventListener('click', () => {
     createDomElements('editar', 'tipoActivos');
+});
+document.getElementById('eliminarTipoActivos').addEventListener('click', () => {
+    createDomElements('eliminar', 'tipoActivos');
 });

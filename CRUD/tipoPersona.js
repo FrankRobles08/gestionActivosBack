@@ -8,22 +8,28 @@ import {
 
 
 export const loadDataTipoPersona = (action, id) => {
-    const newData = {
+    const newDict = {
         "id": document.querySelector('#input-id').value,
         "nombre": document.querySelector('#input-nombre').value
     };
     switch (action){
         case 'agregar':
-            loadData('tipoPersona', newData);
+            loadData('tipoPersona', newDict);
             break;
         case 'editar':
-            updateData('tipoPersona', id, newData);
+            updateData('tipoPersona', id, newDict);
             break;
     }
 };
+document.getElementById('agregarTipoPersona').addEventListener('click', (e)=>{
+    createDomElements('agregar', 'tipoPersona');
+});
 document.getElementById('buscarTipoPersona').addEventListener('click', (e)=>{
     createDomElements('buscar', 'tipoPersona');
 });
 document.getElementById('editarTipoPersona').addEventListener('click', () => {
     createDomElements('editar', 'tipoPersona');
+});
+document.getElementById('eliminarTipoPersona').addEventListener('click', () => {
+    createDomElements('eliminar', 'tipoPersona');
 });

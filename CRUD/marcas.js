@@ -7,22 +7,29 @@ import {
 } from "./crud.js";
 
 export const loadDataMarcas = (action, id) => {
-    const newData = {
+    const newDict = {
         "id": document.querySelector('#input-id').value,
         "nombre": document.querySelector('#input-nombre').value
     };
     switch (action){
         case 'agregar':
-            loadData('marcas', newData);
+            loadData('marcas', newDict);
             break;
         case 'editar':
-            updateData('marcas', id, newData);
+            updateData('marcas', id, newDict);
             break;
     }
 }
+
+document.getElementById('agregarMarcas').addEventListener('click', (e)=>{
+    createDomElements('agregar', 'marcas');
+});
 document.getElementById('buscarMarcas').addEventListener('click', (e)=>{
     createDomElements('buscar', 'marcas');
 });
 document.getElementById('editarMarcas').addEventListener('click', () => {
     createDomElements('editar', 'marcas');
+});
+document.getElementById('eliminarMarcas').addEventListener('click', () => {
+    createDomElements('eliminar', 'marcas');
 });

@@ -43,16 +43,18 @@ const getData = (endPoint) => {
 }
 
 const loadData = (endPoint, newDict) => {
+    let correct;
     for (let i in newDict){
         if (newDict[i].length > 0){
-            continue;
+            correct = true;
         } else{
+            correct = false;
             alert('Debes llenar toda la información para continuar');
             break;
         }
     }
     if (correct){
-        fetch(`${URL_API + endPoint + id}`, {
+        fetch(`${URL_API + endPoint}`, {
                 method: 'POST',
                 headers: myHeaders,
                 body: JSON.stringify(newDict),
@@ -66,8 +68,9 @@ const updateData = (endPoint, id, newDict) => {
     let correct;
     for (let i in newDict){
         if (newDict[i].length > 0){
-            continue;
+            correct = true;
         } else{
+            correct = false;
             alert('Debes llenar toda la información para continuar');
             break;
         }
@@ -86,9 +89,20 @@ const updateData = (endPoint, id, newDict) => {
     }
 }
 
+const deleteData = (endPoint, id) => {
+    fetch(`${URL_API + endPoint + id}`, {
+        method: 'DELETE',
+        headers: myHeaders,
+    })
+    .then(response => response.json())
+    .then(data => console.log('Success:', data))
+    .catch((error) => console.error('Error:', error));
+}
+
 export {
     getOptions,
     getData,
     loadData,
-    updateData
+    updateData,
+    deleteData
 }

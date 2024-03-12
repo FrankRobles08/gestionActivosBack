@@ -31,15 +31,15 @@ export const loadDataActivos = (action, id) => {
     }
 };
 
-document.getElementById('agregarActivos').addEventListener('click', (e)=>{
+document.getElementById('agregarActivos').addEventListener('click', ()=>{
     createDomElements('agregar', 'activos');
 });
-document.getElementById('buscarActivos').addEventListener('click', (e)=>{
+document.getElementById('buscarActivos').addEventListener('click', ()=>{
     createDomElements('buscar', 'activos');
 });
-document.getElementById('editarActivos').addEventListener('click', (e)=>{
+document.getElementById('editarActivos').addEventListener('click', ()=>{
     createDomElements('editar', 'activos');
 });
-// document.getElementById('eliminarActivos').addEventListener('click', (e)=>{
-    // createDomElements('eliminar', 'activos');
-// });
+document.getElementById('eliminarActivos').addEventListener('click', ()=>{
+    createDomElements('eliminar', 'activos');
+});

@@ -7,7 +7,7 @@ import {
 } from "./crud.js";
 
 export const loadDataPersonas = (action, id) => {
-    const newData = {
+    const newDict = {
         "id": document.querySelector('#input-id').value,
         "nombre": document.querySelector('#input-nombre').value,
         "email": document.querySelector('#input-email').value,
@@ -15,10 +15,10 @@ export const loadDataPersonas = (action, id) => {
     };
     switch (action){
         case 'agregar':
-            loadData('personas', newData);
+            loadData('personas', newDict);
             break;
         case 'editar':
-            updateData('personas', id, newData);
+            updateData('personas', id, newDict);
             break;
     }
 }
@@ -30,4 +30,7 @@ document.getElementById('buscarPersonas').addEventListener('click', (e)=>{
 });
 document.getElementById('editarPersonas').addEventListener('click', () => {
     createDomElements('editar', 'personas');
+});
+document.getElementById('eliminarPersonas').addEventListener('click', () => {
+    createDomElements('eliminar', 'personas');
 });

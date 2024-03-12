@@ -1,118 +1,5 @@
 {
-  "activos": [
-    {
-      "id": "A1",
-      "nombre": "Compu",
-      "codTransaccion": "4618",
-      "nroFormulario": "13303",
-      "idMarca": "M2",
-      "idCategoria": "C1",
-      "idTipo": "T5",
-      "valorUnitario": "1000",
-      "idProveedor": "066ssdw06",
-      "nroSerial": "403505",
-      "idEmpresaResponsable": "aed5077",
-      "idEstado": "E2"
-    },
-    {
-      "id": "A2",
-      "nombre": "Lavador",
-      "codTransaccion": "4618",
-      "nroFormulario": "13303",
-      "idMarca": "M2",
-      "idCategoria": "C1",
-      "idTipo": "T5",
-      "valorUnitario": "1000",
-      "idProveedor": "066ssdw06",
-      "nroSerial": "403505",
-      "idEmpresaResponsable": "aed5077",
-      "idEstado": "E3"
-    },
-    {
-      "id": "1",
-      "nombre": "oeeeeee4",
-      "codTransaccion": "1",
-      "nroFormulario": "1",
-      "idMarca": "M1",
-      "idCategoria": "C1",
-      "idTipo": "T1",
-      "valorUnitario": "1",
-      "idProveedor": "1",
-      "nroSerial": "1",
-      "idEmpresaResponsable": "1",
-      "idEstado": "1"
-    },
-    {
-      "id": "4",
-      "nombre": "4",
-      "codTransaccion": "4",
-      "nroFormulario": "4",
-      "idMarca": "4",
-      "idCategoria": "C1",
-      "idTipo": "T1",
-      "valorUnitario": "4",
-      "idProveedor": "4",
-      "nroSerial": "4",
-      "idEmpresaResponsable": "4",
-      "idEstado": "E1"
-    },
-    {
-      "id": "6",
-      "nombre": "6",
-      "codTransaccion": "6",
-      "nroFormulario": "6",
-      "idMarca": "M1",
-      "idCategoria": "C1",
-      "idTipo": "T1",
-      "valorUnitario": "6",
-      "idProveedor": "6",
-      "nroSerial": "6",
-      "idEmpresaResponsable": "6",
-      "idEstado": "E1"
-    },
-    {
-      "id": "aaaaaaaaaaaaaaaaaaaaaaa",
-      "nombre": "1",
-      "codTransaccion": "1",
-      "nroFormulario": "1",
-      "idMarca": "M1",
-      "idCategoria": "C1",
-      "idTipo": "T1",
-      "valorUnitario": "1",
-      "idProveedor": "1",
-      "nroSerial": "1",
-      "idEmpresaResponsable": "1",
-      "idEstado": "E1"
-    },
-    {
-      "id": "bbbbbbbbbbbbbbbbbbbbbbbb",
-      "nombre": "1",
-      "codTransaccion": "1",
-      "nroFormulario": "1",
-      "idMarca": "M1",
-      "idCategoria": "C1",
-      "idTipo": "T1",
-      "valorUnitario": "1",
-      "idProveedor": "1",
-      "nroSerial": "1",
-      "idEmpresaResponsable": "1",
-      "idEstado": "E1"
-    },
-    {
-      "id": "zzzzzzzzzzzzz",
-      "nombre": "1",
-      "codTransaccion": "1",
-      "nroFormulario": "1",
-      "idMarca": "M1",
-      "idCategoria": "C1",
-      "idTipo": "T1",
-      "valorUnitario": "1",
-      "idProveedor": "1",
-      "nroSerial": "1",
-      "idEmpresaResponsable": "1",
-      "idEstado": "E1"
-    }
-  ],
+  "activos": [],
   "marcas": [
     {
       "id": "M1",
@@ -141,30 +28,28 @@
     {
       "id": "M7",
       "nombre": "HP"
+    }
+  ],
+  "ubicacion": [
+    {
+      "id": "U1",
+      "nombre": "Apolo"
     },
     {
-      "id": "4",
-      "nombre": "4"
+      "id": "U2",
+      "nombre": "Sputnik"
     },
     {
-      "id": "7",
-      "nombre": "7"
+      "id": "U3",
+      "nombre": "Zona Hunters"
     },
     {
-      "id": "6",
-      "nombre": "6"
+      "id": "U4",
+      "nombre": "Houston"
     },
     {
-      "id": "aaaaaaaaaaaaaaaaaaaaaaa",
-      "nombre": "1"
-    },
-    {
-      "id": "bbbbbbbbbbbbbbbbbbbbbbbb",
-      "nombre": "1"
-    },
-    {
-      "id": "zzzzzzzzzzzzz",
-      "nombre": "1"
+      "id": "U5",
+      "nombre": "Auditorio"
     }
   ],
   "personas": [
